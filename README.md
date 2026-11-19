@@ -7,7 +7,7 @@ TrackMate（Spotiflow で検出）の XML と元の動画から、track ごと�
 XML は、Fiji の TrackMate の GUI で作っても、このリポジトリのマクロ [`scripts/fiji/spotiflow_trackmate.groovy`](scripts/fiji/spotiflow_trackmate.groovy) で作っても構いません。マクロを使うと、毎回同じ設定で TrackMate を実行できます。
 
 1. Fiji に TrackMate 8 と TrackMate-Spotiflow（update site `TrackMate-Spotiflow`）を入れ、Spotiflow の conda 環境を用意しておきます。
-2. マクロのファイルを保存します。**[マクロをダウンロード（spotiflow_trackmate.groovy）](https://github.com/jk12358/trackmate-spotiflow-analysis-public/raw/main/scripts/fiji/spotiflow_trackmate.groovy)** を右クリックし、「名前を付けてリンク先を保存」を選びます。ファイル名は `spotiflow_trackmate.groovy` のままにします。末尾に `.txt` が付くと Fiji でマクロとして開けないので、保存の画面に「ファイルの種類」があれば「すべてのファイル」を選んでください。保存したファイルを Fiji のウィンドウにドラッグ＆ドロップすると、Script Editor で開きます。
+2. **[マクロをダウンロード（spotiflow_trackmate.groovy）](https://github.com/jk12358/trackmate-spotiflow-analysis-public/releases/latest/download/spotiflow_trackmate.groovy)** をクリックすると、最新版のファイルが保存されます。保存したファイルを Fiji のウィンドウにドラッグ＆ドロップすると、Script Editor で開きます。前の版は [Releases](https://github.com/jk12358/trackmate-spotiflow-analysis-public/releases) にあります。
 3. Run を押し、動画、出力先のフォルダ、Spotiflow のモデル、Linking max distance、Gap-closing max distance、Max frame gap を入れて OK を押します。距離は動画の空間の単位で読まれます（校正がなければ pixel、あれば µm など）。
 4. 出力先にできた `trackmate_<日時>` のフォルダの `<動画名>.xml` を、下のアプリに入れます。
 
