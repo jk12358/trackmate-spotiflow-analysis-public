@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Data and results (never commit)
+data/
+outputs/
+references/
+models/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# OS / editors
+desktop.ini
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# yomiyasu check records
+.yomiyasu/

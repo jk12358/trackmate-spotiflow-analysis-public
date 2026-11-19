@@ -1,0 +1,40 @@
+[project]
+name = "trackmate-spotiflow-analysis"
+version = "0.1.0"
+description = "Compute MSD and diffusion coefficients from TrackMate XML and overlay them on the movie"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "imageio>=2.38.2",
+    "imageio-ffmpeg>=0.8.1",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "pandas>=3.1.1",
+    "pillow>=13.0.0",
+    "pyyaml>=6.0.3",
+    "streamlit>=1.67.0",
+    "tifffile>=2026.11.16",
+]
+
+[project.scripts]
+tmsa = "trackmate_spotiflow_analysis.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

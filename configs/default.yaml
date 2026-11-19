@@ -1,0 +1,18 @@
+# Standard analysis settings. The app shows these values and lets the user change
+# them per run; the values actually used are saved to each run's metadata.yaml.
+analysis:
+  frame_interval_s: 0.076          # 76.0 ms per frame
+  pixel_size_um: 0.16670           # 166.70 nm per pixel
+  fit_initial_points: 4            # fit the first 4 MSD points (Enomoto et al.)
+  include_intercept: true          # MSD(dt) = 4D * dt + b
+  min_spots: 30                    # minimum number of spots in a track
+  immobile_threshold_um2_s: 0.0004 # D below this is immobile
+  use_filtered_tracks: true        # use only tracks kept by TrackMate's track filters
+
+overlay:
+  enabled: true
+  fps: 8
+  target_width_px: 600             # movies are scaled up to about this width
+
+figures:
+  jitter_seed: 0
